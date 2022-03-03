@@ -1,0 +1,187 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="proje.Admin" %>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>PERSONEL BİLGİ SİSTEMİ</title>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="Bootstrap%20Dosyalar1/Dosyalar1/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Our Custom CSS -->
+    <link href="Bootstrap%20Dosyalar1/Dosyalar1/StyleSheet2.css" rel="stylesheet" />
+</head>
+<body>
+
+
+
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Menüler</h3>
+                <strong>BS</strong>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-user"></i>
+                        Pesonel
+                    </a>
+                    <ul class="collapse list-unstyled  " id="homeSubmenu">
+                        <li><a href="Default.aspx">Personel Listesi</a></li>
+                        <li><a href="personelEkle.aspx">Personel Ekle</a></li>
+                        <li><a href="personelGuncelle.aspx">Personel Güncelle</a></li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#mesaiSubmenu" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-time"></i>
+                        Mesai Bilgisi
+                    </a>
+                    <ul class="collapse list-unstyled  " id="mesaiSubmenu">
+                        <li><a href="mesaiPersonel.aspx">Personel Mesai Listesi</a></li>
+                        <li><a href="mesaiEkleme.aspx">Personel Mesai Ekle</a></li>
+                        <%--<li><a href="mesaiPersoneGuncelle.aspx">Personel Mesai Güncelle</a></li>--%>
+                        <%--<li><a href="#">Personel Mesai Sil</a></li>--%>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#hobiSubmenu" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-heart"></i>
+                        Personel Hobi 
+                    </a>
+                    <ul class="collapse list-unstyled  " id="hobiSubmenu">
+                        <li><a href="hobiler.aspx">Personel Hobi Listesi</a></li>
+                        <li><a href="hobiEkle.aspx">Personel Hobi Ekle</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#asiSubmenu" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-plus"></i>
+                        Personel Aşı Bilgisi
+                    </a>
+                    <ul class="collapse list-unstyled" id="asiSubmenu">
+                        <li><a href="asiliPersonel.aspx">Aşılı Personeeler</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#kronikSubmenu" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-remove-sign"></i>
+                        Personel Kronik Hastalıkları
+                    </a>
+                    <ul class="collapse list-unstyled" id="kronikSubmenu">
+                        <li><a href="kronik_personel_listesi.aspx">Personel Kronik Hastalıkları</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#patientSubmenu" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-heart-empty"></i>
+                        Hasta Olan Personeller
+                    </a>
+                    <ul class="collapse list-unstyled  " id="patientSubmenu">
+                        <li><a href="hastaPersonel.aspx">Hasta Personeller</a></li>
+                        <li><a href="hastaPersonelEkle.aspx">Hasta Personel Ekle</a></li>
+                        <li><a href="hastaPersonelGuncelle.aspx">Hasta Personel Güncelle</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-fire "></i>
+                        Kovid Olan Personeller
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li><a href="kovidliPersonel.aspx">Kovidli Personeller</a></li>
+                        <li><a href="kovidliPersonelEkle.aspx">Kovidli Personel Ekle</a></li>
+                        <li><a href="kovidliPersonelGuncelle.aspx">Kovidli Personel Güncelle</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#kroniksemptomSubmenu" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-align-justify"></i>
+                        Kovidli Personel Semptomları
+                    </a>
+                    <ul class="collapse list-unstyled" id="kroniksemptomSubmenu">
+                        <li><a href="kovidliPersonelSemptomlari.aspx">Koivdli Personel Semptomları</a></li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#temasliSubmenu" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-user"></i>
+                        Temaslı Personeller
+                    </a>
+                    <ul class="collapse list-unstyled" id="temasliSubmenu">
+                        <li><a href="#">Temaslı Personeller</a></li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#istatistikSubmenu" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-stats"></i>
+                        İstatistikler
+                    </a>
+                    <ul class="collapse list-unstyled" id="istatistikSubmenu">
+                        <li><a href="sayfa1.aspx">Eğitim Durumu ile Kovid Arasındaki İlişki</a></li>
+                        <li><a href="hastalikPersoneliliskisi.aspx">Personel ile Hastalık Araındaki İlişki</a></li>
+                        <li><a href="dogumyeri_hastalik_iliskisi.aspx">Şehirlere Göre Hastalık İlişkisi</a></li>
+                        <li><a href="korana_ilac_iliskisi.aspx">Personel-İlaç-Kovid İlişkisi</a></li>
+                        <li><a href="korona_ialac_iliskisi.aspx">İlaç-Kovid İlişkisi</a></li>
+                        <li><a href="korona_biontech_hasta.aspx">Biontech-Hatalık-Korana İlişkisi</a></li>
+                        <li><a href="asi_durumuna_gore_kovidli.aspx">Aşı-KOvid İlişkisi</a></li>
+                        <li><a href="kronik_kovid_iliskisi.aspx">Kronik Hastalıklar-Kovid- Arasındaki İlişki</a></li>
+                        <li><a href="kangrubu_korana_iliskisi.aspx">Kan Grubu-Kovid İlişkisi</a></li>
+                        <li><a href="calismasuresi_kovidiliskisi.aspx">Mesai-Kovid İlşkisi</a></li>
+                        <li><a href="korana_semptom_iliskisi.aspx">Kovid-Belirti Arasındaki İlişki</a></li>
+                        <li><a href="encok_temasli_3_kisi.aspx"> En Çok Temaslı 3 Kişi</a></li>
+                        <li><a href="sinovac_biontech.aspx">Biontech-Sinovak Etkinlikleri Arasındaki İlişki</a></li>
+                        <li><a href="haftasonu_kovid_iliskisi.aspx">Haftasonu-Kovid Arsındaki İlişki</a></li>
+                        <li><a href="en_sık_hasta_olan_10_kisi.aspx">Sık Hastalanlarla-Kovid Arasındaki İlişki</a></li>
+                        <li><a href="asisiz_enuzun_kovidli.aspx">Aşızılar-Kovid-Hastalıklar-Reçete</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+
+
+
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <!-- jQuery CDN -->
+    <script src="Bootstrap%20Dosyalar1/Dosyalar1/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap Js CDN -->
+    <script src="Bootstrap%20Dosyalar1/Dosyalar1/js-bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+</html>
+
